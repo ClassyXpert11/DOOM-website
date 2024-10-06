@@ -1,0 +1,553 @@
+ @font-face {
+    font-family: "Doom 2016 Left";
+    src: url(/fonts/Doom2016Left-RpJDA.ttf);
+}
+
+@font-face {
+    font-family: "Eternal UI";
+    src: url(/fonts/EternalUiRegular-BWZGd.ttf);
+} 
+
+:root {
+    --text: #ffffff;
+    --background: #040101;
+    --primary: #d81822;
+    --secondary: #2e0507;
+    --accent1: #FFD700;
+    --accent2: #C0C0C0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Eternal UI";
+    margin: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------h1,h2,h3 tags with media queries-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 6em;
+    font-family: "Doom 2016 Left";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 5em;
+    font-family: "Doom 2016 Left";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 4em;
+    font-family: "Doom 2016 Left";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:650px) {
+    h1 {
+        font-size: 5em;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    h3 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width:530px) {
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width:420px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------h1,h2,h3 tags with media queries-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Navbar styling--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.navbar-container nav {
+    background-color: var(--primary);
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container .bar-collapse {
+    background-color: var(--primary);
+    margin: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.a-nav {
+    margin: 0;
+    padding: 15px 10px;
+    color: var(--text);
+    font-family: "Eternal UI";
+    font-size: 1.3em;
+    text-decoration: none;
+
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-container .bar-collapse {
+    display: none;
+    padding: 25px 10px;
+    color: var(--text);
+    margin: 0;
+}
+
+@media (max-width:800px) {
+    .navbar-container nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        background-color: var(--primary);
+    }
+
+    .navbar-container nav div #de-levels {
+        position: absolute;
+        margin: 40px 0 0 90px;
+    }
+
+    .navbar-container nav div #tag1-levels,
+    .navbar-container nav div #tag2-levels {
+        position: absolute;
+        margin: 40px 0 0 150px;
+    }
+
+    .navbar-container nav div #more-links {
+        position: absolute;
+        margin: 40px 0 0 50px;
+    }
+
+    .navbar-container .bar-collapse {
+        display: block;
+    }
+
+    .navbar-container nav.active {
+        display: flex;
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Navbar styling--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Navbar animations------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------- */
+.a-nav::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 3px;
+    background-color: var(--accent1);
+    transition: transform 0.3s ease-in-out;
+  
+    transform: scaleX(0);
+}
+  
+.a-nav:hover::before, .a-nav:focus::before {
+    transform: scaleX(1);
+}
+  
+.a-nav:hover,
+.a:focus {
+    color: var(--accent2);
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Navbar animations------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Main container--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.main-container {
+    padding: 10px;
+    margin: 10px auto;
+    background-color: var(--secondary);
+    width: 90%;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+}
+
+.main-container p {
+    background-color: var(--primary);
+    border: 2px solid var(--accent2);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.main-container .intro-vid {
+    float: left;
+    margin: 0 10px;
+    background-color: var(--accent1);
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main-container iframe {
+    height: 300px;
+    width: 540px;
+}
+
+.main-container hr {
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.caco-div {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width:1150px) {
+    .main-container iframe {
+        height: 200px;
+        width: 360px;
+    }
+    .main-container p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:1000px) {
+    .main-container p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width:901px) {
+    .main-container iframe {
+        height: 150px;
+        width: 270px;
+    }
+    .main-container p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width:700px) {
+    .main-container iframe {
+        height: 100px;
+        width: 190px;
+    }
+    .main-container p {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-width:600px) {
+    .main-container p {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-container iframe {
+        height: 60px;
+        width: 110px;
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Main container--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------dropdown css beginning---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.levels-container {
+    background-color: var(--secondary);
+    margin: 3.8% 0;
+    position: absolute;
+    display: none;
+    border: 2px solid var(--accent2);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.levels-container a {
+    color: var(--text);
+    min-width: 110px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hover and focus psuedo elements for the dropdown items ~~~~~~~~~~~~~~~~~~~~~~ */
+#de-levels a:hover,
+#de-levels a:focus {
+    background-color: var(--accent1);
+    color: var(--background);
+}
+#de-levels a:hover:nth-child(1),
+#de-levels a:focus:nth-child(1) {
+    border-radius: 7.3px 7.3px 0 0;
+}
+#de-levels a:hover:nth-child(13),
+#de-levels a:focus:nth-child(13) {
+    border-radius: 0 0 7.3px 7.3px;
+}
+
+#tag1-levels a:hover,
+#tag1-levels a:focus {
+    background-color: var(--accent1);
+    color: var(--background);
+}
+#tag1-levels a:hover:nth-child(1),
+#tag1-levels a:focus:nth-child(1) {
+    border-radius: 7.3px 7.3px 0 0;
+}
+#tag1-levels a:hover:nth-child(3),
+#tag1-levels a:focus:nth-child(3) {
+    border-radius: 0 0 7.3px 7.3px;
+}
+
+#tag2-levels a:hover,
+#tag2-levels a:focus {
+    background-color: var(--accent1);
+    color: var(--background);
+}
+#tag2-levels a:hover:nth-child(1),
+#tag2-levels a:focus:nth-child(1) {
+    border-radius: 7.3px 7.3px 0 0;
+}
+#tag2-levels a:hover:nth-child(4),
+#tag2-levels a:focus:nth-child(4) {
+    border-radius: 0 0 7.3px 7.3px;
+}
+
+#more-links a:hover,
+#more-links a:focus {
+    background-color: var(--accent1);
+    color: var(--background);
+} 
+#more-links a:hover:nth-child(1),
+#more-links a:focus:nth-child(1) {
+    border-radius: 7.3px 7.3px 0 0;
+} 
+#more-links a:hover:nth-child(2),
+#more-links a:focus:nth-child(2) {
+    border-radius: 0 0 7.3px 7.3px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hover and focus psuedo elements for the dropdown items ~~~~~~~~~~~~~~~~~~~~~~ */
+
+.DE-dropdown:hover .levels-container, 
+.tag1-dropdown:hover .levels-container, 
+.tag2-dropdown:hover .levels-container,
+.more-dropdown:hover .levels-container {
+    display: block;
+}
+
+.DE-dropdown, .tag1-dropdown, .tag2-dropdown, .more-dropdown {
+    display: flex;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------dropdown css end---------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------Doom Eternal levels css beginning-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.de-levels-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0;
+}
+
+.de-levels-container .level a{
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.de-levels-container img {
+    border: 2px solid var(--accent1);
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .de-levels-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .de-levels-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .de-levels-container img {
+        width: 200px;
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------Doom Eternal levels css end-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------Trailers css beginning-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.trailers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.trailer iframe {
+    width: 300px;
+    height: 170px;
+    background-color: var(--accent1);
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media (max-width:1245px) {
+    .trailers-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:850px) {
+    .trailers-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:400px) {
+    .trailer iframe {
+        width: 200px;
+        height: 113px;
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------Trailers css end-------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------Specific levels stying--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
+.specific-level-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 8px;
+    margin: 20px 3px 5px 3px;
+    color: var(--text);
+    background-color: var(--primary);
+    border: 2px solid var(--accent2);
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+    background-color: var(--accent1);
+    color: var(--background);
+    box-shadow: 0px 5px 10px 1px var(--accent1);
+}
+
+.pagination a.on-the-page{
+    background-color: var(--accent1);
+    color: var(--background);
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------Specific levels stying--------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
